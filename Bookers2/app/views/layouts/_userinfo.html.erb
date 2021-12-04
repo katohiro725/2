@@ -1,0 +1,53 @@
+
+
+<h1>About me</h1>
+
+<h2>User info</h2>
+
+
+<%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+<table>
+<tbody>
+
+<td>
+name
+</td>
+
+<td>
+<%= user.name %>
+</td>
+
+<tr>
+
+<td>
+introduction
+</td>
+<td>
+  <%= user.introduction %>
+
+</td>
+
+</tr>
+
+
+
+
+<td>
+<p><%= link_to "プロフィール編集", edit_user_path(current_user), class: "pull-right" %></p>
+</td>
+
+
+</tbody>
+</table>
+
+
