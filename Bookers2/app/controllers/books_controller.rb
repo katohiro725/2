@@ -12,6 +12,7 @@ before_action :authenticate_user!
   def show
     @book= Book.find(params[:id])
     @user = User.find_by(id: @book.user_id)
+   #@user = @book.user
   end
 
   def new
